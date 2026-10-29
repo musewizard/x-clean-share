@@ -16,7 +16,7 @@ https://x.com/user/status/1234567890
 
 ## 安装
 
-GreasyFork：https://greasyfork.org/scripts/XXXXX
+GreasyFork：https://greasyfork.org/zh-CN/scripts/602753
 
 手动：装 Tampermonkey 或 Violentmonkey，新建脚本，粘贴 `x-clean-share.user.js` 全文。
 
@@ -84,7 +84,7 @@ https://x.com/user/status/1234567890
 
 ## Install
 
-GreasyFork: https://greasyfork.org/scripts/XXXXX
+GreasyFork: https://greasyfork.org/scripts/602753
 
 Or manually: install Tampermonkey or Violentmonkey, create a new script, paste the whole `x-clean-share.user.js`.
 
