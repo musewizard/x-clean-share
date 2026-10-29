@@ -3,7 +3,7 @@
 X（Twitter）的「分享 → 复制链接」会往地址里塞追踪参数：
 
 ```
-https://x.com/user/status/1234567890?a=aNdSpiG2CrX9dPqMVn0&s=20
+https://x.com/user/status/1234567890?a=xxxxxxxxxxxx&s=20
 ```
 
 装上脚本后复制出来的是：
@@ -71,7 +71,7 @@ MIT
 X's "Share → Copy link" appends tracking parameters to the URL:
 
 ```
-https://x.com/user/status/1234567890?a=aNdSpiG2CrX9dPqMVn0&s=20
+https://x.com/user/status/1234567890?a=xxxxxxxxxxxx&s=20
 ```
 
 With this script you get:

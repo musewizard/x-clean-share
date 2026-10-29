@@ -17,8 +17,8 @@ const server = http.createServer((req, res) => {
 });
 await new Promise((r) => server.listen(PORT, '127.0.0.1', r));
 
-const DIRTY = 'https://x.com/ohayou792/status/2115688877797286011?a=aNdSpiG2CrX9dPqMVn0&s=20';
-const CLEAN = 'https://x.com/ohayou792/status/2115688877797286011';
+const DIRTY = 'https://x.com/example_user/status/1234567890?a=xxxxxxxxxxxx&s=20';
+const CLEAN = 'https://x.com/example_user/status/1234567890';
 
 const CASES = [
   { id: 'b1', name: 'writeText', expect: CLEAN },

@@ -11,7 +11,7 @@
 </head>
 <body>
 <h3>模拟 X 的几种「复制链接」实现</h3>
-<p>被测链接：<code>https://x.com/ohayou792/status/2115688877797286011?a=aNdSpiG2CrX9dPqMVn0&amp;s=20</code></p>
+<p>被测链接：<code>https://x.com/example_user/status/1234567890?a=xxxxxxxxxxxx&amp;s=20</code></p>
 
 <button id="b1">1. navigator.clipboard.writeText</button>
 <button id="b2">2. navigator.clipboard.write(ClipboardItem)</button>
@@ -25,7 +25,7 @@
 <button id="b10">10. 点菜单「帖子分享途径…」（不应被接管）</button>
 
 <article id="fake-tweet" style="border:1px solid #333;padding:8px;margin-top:12px;max-width:420px">
-  <a href="/ohayou792/status/2115688877797286011">这条推文的链接</a>
+  <a href="/example_user/status/1234567890">这条推文的链接</a>
   <div role="menu" style="margin-top:8px">
     <div role="menuitem" id="mi-copy" style="cursor:pointer;padding:4px">复制链接</div>
     <div role="menuitem" id="mi-share" style="cursor:pointer;padding:4px">帖子分享途径…</div>
@@ -34,7 +34,7 @@
 
 <script src="../x-clean-share.user.js"></script>
 <script>
-const DIRTY = 'https://x.com/ohayou792/status/2115688877797286011?a=aNdSpiG2CrX9dPqMVn0&s=20';
+const DIRTY = 'https://x.com/example_user/status/1234567890?a=xxxxxxxxxxxx&s=20';
 
 // 1
 document.getElementById('b1').onclick = () => navigator.clipboard.writeText(DIRTY);
@@ -74,7 +74,7 @@ window.addEventListener('copy', (e) => {
 document.getElementById('b4').onclick = () => { window.__copyStyle = 'window-capture'; legacyCopy(); };
 
 // 5/6/7 不该被改的用例
-document.getElementById('b5').onclick = () => navigator.clipboard.writeText('https://x.com/ohayou792/status/2115688877797286011');
+document.getElementById('b5').onclick = () => navigator.clipboard.writeText('https://x.com/example_user/status/1234567890');
 document.getElementById('b6').onclick = () => navigator.clipboard.writeText('https://example.com/a/status/1?s=20');
 document.getElementById('b7').onclick = () => navigator.clipboard.writeText('看看这条：' + DIRTY + ' 挺有意思的');
 
@@ -92,11 +92,11 @@ document.getElementById('b8').onclick = () => {
 // 9/10 模拟 X 的菜单项：页面自己的处理器会写入带参数的链接
 document.getElementById('mi-copy').onclick = () => {
   window.__pageHandlerRan = 'copy';
-  navigator.clipboard.writeText('https://x.com/ohayou792/status/2115688877797286011?s=99&t=xyz');
+  navigator.clipboard.writeText('https://x.com/example_user/status/1234567890?s=99&t=xyz');
 };
 document.getElementById('mi-share').onclick = () => {
   window.__pageHandlerRan = 'share';
-  navigator.clipboard.writeText('https://x.com/ohayou792/status/2115688877797286011?share=1');
+  navigator.clipboard.writeText('https://x.com/example_user/status/1234567890?share=1');
 };
 document.getElementById('b9').onclick = () => document.getElementById('mi-copy').click();
 document.getElementById('b10').onclick = () => document.getElementById('mi-share').click();
